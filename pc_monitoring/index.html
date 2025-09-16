@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUC PC_Monitor - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo_premierUNi.png" alt="" class="logo-img">
+            </a>
+            <span class="navbar-brand-text">PUC PC_Monitor</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="workspace.html">Workspace</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="archive.html">Archive</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-text text-center">
+            <h1 class="display-4 fw-bold">How We Monitor PCs</h1>
+            <p class="lead">Our system uses advanced PHP and MySQL integration to periodically check the internet connectivity of 120 PCs across 4 labs. Each PC's status is fetched via a secure API, displayed in real-time on the Workspace dashboard, and archived for historical analysis.</p>
+            <a href="workspace.html" class="btn btn-custom mt-3">Explore Workspace</a>
+        </div>
+    </section>
+
+//updated_
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose PUC PC Monitor?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-blue-100 p-6 rounded-lg">
+                        <i class="fas fa-sync-alt text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Real-Time Updates</h3>
+                        <p class="text-gray-600">Monitor PC status with real-time updates every few seconds.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-100 p-6 rounded-lg">
+                        <i class="fas fa-user-shield text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Admin Control</h3>
+                        <p class="text-gray-600">Secure access for admins to manage and monitor PCs.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-blue-100 p-6 rounded-lg">
+                        <i class="fas fa-history text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2">Offline Archive</h3>
+                        <p class="text-gray-600">Track offline PCs with detailed logs and timestamps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">Empowering PUC Labs</h2>
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto">Our user-friendly interface simplifies monitoring of 120 PCs across four labs, providing a reliable and user-friendly experience for both admins and users. Stay in control.</p>
+            <a href="about.html" class="bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all">Learn More</a>
+            <a href="archive.html" class="ml-4 bg-gray-200 text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-300 transition-all">Archive List</a>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Labs at a Glance</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-4xl font-bold text-blue-600">4</h3>
+                    <p class="text-gray-600 mt-2">Computer Labs</p>
+                </div>
+                <div class="text-center bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-4xl font-bold text-blue-600">120</h3>
+                    <p class="text-gray-600 mt-2">Total PCs</p>
+                </div>
+                <div class="text-center bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-4xl font-bold text-blue-600">80</h3>
+                    <p class="text-gray-600 mt-2">Online PCs</p>
+                </div>
+                <div class="text-center bg-gray-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-4xl font-bold text-blue-600">40</h3>
+                    <p class="text-gray-600 mt-2">Offline PCs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+//till
+
+    <footer class="footer">
+        <div class="container mt-5">
+            <div class="card card-custom p-1">
+                <h5 class="mb-3">Follow Us</h5>
+                <ul class="list-unstyled social-list">
+                    <li class="d-inline-block me-3">
+                        <a href="https://www.facebook.com/PremierUniversityChittagong/" target="_blank">
+                            <i class="fab fa-facebook-f social-icon"></i>
+                        </a>
+                    </li>
+                    <li class="d-inline-block me-3">
+                        <a href="https://www.linkedin.com/company/premieruniversitychittagong/" target="_blank">
+                            <i class="fab fa-linkedin-in social-icon"></i>
+                        </a>
+                    </li>
+                    <li class="d-inline-block">
+                        <a href="https://www.twitter.com/yourprofile" target="_blank">
+                            <i class="fab fa-twitter social-icon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div><br>
+        <div class="container">
+            <p>© 2025 PUC PC_Monitor System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

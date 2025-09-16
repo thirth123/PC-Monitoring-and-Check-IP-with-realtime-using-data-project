@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUC PC_Monitor - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="logo_premierUNi.png" alt="" class="logo-img">
+            </a>
+            <span class="navbar-brand-text">PUC PC_Monitor</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="workspace.html">Workspace</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="archive.html">Archive</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card card-custom p-4">
+                    <div id="messageArea" class="mb-3"></div>
+                    <ul class="nav nav-tabs mb-4" id="loginTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="user-tab" data-bs-toggle="tab" data-bs-target="#user" type="button">User Login</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="admin-tab" data-bs-toggle="tab" data-bs-target="#admin" type="button">Admin Login</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button">Register</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="loginTabContent">
+                        <div class="tab-pane fade show active" id="user" role="tabpanel">
+                            <form action="login.php" method="POST">
+                                <input type="hidden" name="type" value="user">
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                </div>
+                                <button type="submit" class="btn btn-custom w-100">Login</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="admin" role="tabpanel">
+                            <form action="login.php" method="POST">
+                                <input type="hidden" name="type" value="admin">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" name="username" placeholder="Username" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                </div>
+                                <button type="submit" class="btn btn-custom w-100">Login</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="register" role="tabpanel">
+                            <form action="register.php" method="POST">
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                                </div>
+                                <button type="submit" class="btn btn-custom w-100">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 PUC PC_Monitor System. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Placeholder for displaying session messages (requires login.php to pass messages)
+        window.onload = function() {
+            // This is a basic example; ideally, use PHP to render messages
+            const urlParams = new URLSearchParams(window.location.search);
+            const success = urlParams.get('success');
+            const error = urlParams.get('error');
+            const messageArea = document.getElementById('messageArea');
+
+            if (success) {
+                messageArea.innerHTML = `<div class="alert alert-success">${success}</div>`;
+            } else if (error) {
+                messageArea.innerHTML = `<div class="alert alert-danger">${error}</div>`;
+            }
+        };
+    </script>
+</body>
+</html>
